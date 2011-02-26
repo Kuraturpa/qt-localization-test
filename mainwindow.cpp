@@ -12,6 +12,8 @@ MainWindow::MainWindow(QApplication* a,QWidget *parent) :
     ui->setupUi(this);
     this->app = a;
     lang = new Language(app);
+    if(!lang)
+        return;
     connect(ui->pushButton_quit,SIGNAL(clicked()),this,SLOT(close()));
     connect(ui->radioButton_suomi,SIGNAL(clicked()),this,SLOT(ChangeLanguage()));
     connect(ui->radioButton_english,SIGNAL(clicked()),this,SLOT(ChangeLanguage()));
@@ -46,6 +48,8 @@ void MainWindow::OpenDialog()
     std::clog<<"MainWindow::OpenDialog()"<<std::endl;
     QDialog d;
     Ui::Dialog* dg = new Ui::Dialog;
+    if(!dg)
+        return;
     dg->setupUi(&d);
     delete dg;
     d.exec();
