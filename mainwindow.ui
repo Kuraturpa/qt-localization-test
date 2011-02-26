@@ -41,6 +41,9 @@
            <height>24</height>
           </rect>
          </property>
+         <property name="accessibleName">
+          <string>0</string>
+         </property>
          <property name="text">
           <string>Suomi</string>
          </property>
@@ -57,13 +60,15 @@
            <height>24</height>
           </rect>
          </property>
+         <property name="accessibleName">
+          <string>1</string>
+         </property>
          <property name="text">
           <string>English</string>
          </property>
         </widget>
-        <zorder>radioButton_suomi</zorder>
         <zorder>radioButton_english</zorder>
-        <zorder></zorder>
+        <zorder>radioButton_suomi</zorder>
        </widget>
       </item>
       <item row="1" column="0" colspan="2">

@@ -3,6 +3,7 @@
 #include "ui_dialog.h"
 #include <iostream>
 #include <QDialog>
+#include <QList>
 
 MainWindow::MainWindow(QApplication* a,QWidget *parent) :
     QMainWindow(parent),
@@ -30,10 +31,13 @@ MainWindow::~MainWindow()
 void MainWindow::ChangeLanguage()
 {
     std::clog<<"MainWindow::ChangeLanguage()"<<std::endl;
-    if(ui->radioButton_suomi->isChecked())
-        lang->ChangeLanguage(0);
-    else
-        lang->ChangeLanguage(1);
+    QList<QRadioButton*> list = ui->groupBox->findChildren<QRadioButton*>();
+    for(int i=0;i<list.size();i++)
+    {
+        QRadioButton* rb = list.at(i);
+        if(rb->isChecked() && rb->accessibleName().length() > 0)
+            lang->ChangeLanguage(rb->accessibleName().toInt());
+    }
     ui->retranslateUi(this);
 }
 
