@@ -18,3 +18,6 @@ HEADERS  += mainwindow.h \
     language.h
 
 FORMS    += mainwindow.ui
+
+TRANSLATIONS += suomi.ts
+TRANSLATIONS += english.ts

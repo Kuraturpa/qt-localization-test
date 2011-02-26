@@ -13,12 +13,13 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QApplication*,QWidget *parent = 0);
     ~MainWindow();
 
 private:
     Ui::MainWindow *ui;
     Language* lang;
+    QApplication* app;
 
 public slots:
     void ChangeLanguage();

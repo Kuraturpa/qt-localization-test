@@ -1,17 +1,20 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "language.h"
+//#include "language.h"
 #include <iostream>
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(QApplication* a,QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    lang = new Language();
+    this->app = a;
+    lang = new Language(app);
     connect(ui->pushButton_quit,SIGNAL(clicked()),this,SLOT(close()));
     connect(ui->radioButton_suomi,SIGNAL(clicked()),this,SLOT(ChangeLanguage()));
     connect(ui->radioButton_english,SIGNAL(clicked()),this,SLOT(ChangeLanguage()));
+    lang->ChangeLanguage(0);
+    ui->retranslateUi(this);
     std::clog<<"Window opened"<<std::endl;
 }
 
@@ -29,4 +32,5 @@ void MainWindow::ChangeLanguage()
         lang->ChangeLanguage(0);
     else
         lang->ChangeLanguage(1);
+    ui->retranslateUi(this);
 }
