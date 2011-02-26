@@ -11,8 +11,7 @@ Language::Language(QObject *parent) :
 
 }
 
-void Language::ChangeLanguage()
+void Language::ChangeLanguage(const int num)
 {
-    //std::clog<< "Language::ChangeLanguage(" << name.toStdString() << ")" << std::endl;
-    std::clog<< "Language::ChangeLanguage()" << std::endl;
+    std::clog<< "Language::ChangeLanguage(" << num << ")" << std::endl;
 }
