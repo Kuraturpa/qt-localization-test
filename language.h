@@ -3,6 +3,7 @@
 #include <QObject>
 #include <QApplication>
 #include <QTranslator>
+#include <QStringList>
 //#include <QString>
 
 class Language : public QObject
@@ -15,6 +16,7 @@ public:
 private:
     QApplication* app;
     QTranslator* ts;
+    QStringList languages;
 
 };
 

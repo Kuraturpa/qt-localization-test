@@ -1,15 +1,12 @@
 #include "language.h"
 #include <iostream>
-#include <QObject>
-#include <QVariant>
-#include <QApplication>
-#include <QTranslator>
-//#include <QString>
 
 Language::Language(QApplication* a)
 {
     this->app = a;
     this->ts = new QTranslator();
+    languages<<"suomi.qm";
+    languages<<"english.qm";
 }
 
 Language::~Language()
@@ -21,9 +18,8 @@ Language::~Language()
 void Language::ChangeLanguage(const int num)
 {
     std::clog<< "Language::ChangeLanguage(" << num << ")" << std::endl;
-    if(num == 0)
-        ts->load("suomi.qm");
-    else
-        ts->load("english.qm");
+    if(num > languages.size())
+        return;
+    ts->load(languages[num]);
     this->app->installTranslator(ts);
 }
