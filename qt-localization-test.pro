@@ -17,7 +17,8 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     language.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    dialog.ui
 
 TRANSLATIONS += suomi.ts
 TRANSLATIONS += english.ts

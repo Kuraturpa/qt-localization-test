@@ -23,6 +23,7 @@ private:
 
 public slots:
     void ChangeLanguage();
+    void OpenDialog();
 };
 
 #endif // MAINWINDOW_H
