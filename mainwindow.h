@@ -19,6 +19,9 @@ public:
 private:
     Ui::MainWindow *ui;
     Language* lang;
+
+public slots:
+    void ChangeLanguage();
 };
 
 #endif // MAINWINDOW_H
