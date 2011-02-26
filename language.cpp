@@ -5,6 +5,8 @@ Language::Language(QApplication* a)
 {
     this->app = a;
     this->ts = new QTranslator();
+    if(!ts)
+        return;
     languages<<"suomi.qm";
     languages<<"english.qm";
 }
