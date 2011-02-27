@@ -9,6 +9,7 @@ Language::Language(QApplication* a)
         return;
     languages<<"suomi.qm";
     languages<<"english.qm";
+    languages<<"lorem.qm";
 }
 
 Language::~Language()
@@ -20,8 +21,9 @@ Language::~Language()
 void Language::ChangeLanguage(const int num)
 {
     std::clog<< "Language::ChangeLanguage(" << num << ")" << std::endl;
-    if(num > languages.size())
+    if(num >= languages.size())
         return;
-    ts->load(languages[num]);
+    if(!ts->load(languages[num]))
+        std::clog<<"Can't find language file."<<std::endl;
     this->app->installTranslator(ts);
 }
