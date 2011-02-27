@@ -22,3 +22,4 @@ FORMS    += mainwindow.ui \
 
 TRANSLATIONS += suomi.ts
 TRANSLATIONS += english.ts
+TRANSLATIONS += lorem.ts
