@@ -4,12 +4,9 @@
 Language::Language(QApplication* a)
 {
     this->app = a;
-    this->ts = new QTranslator();
+    ts = new QTranslator();
     if(!ts)
         return;
-    languages<<"suomi.qm";
-    languages<<"english.qm";
-    languages<<"lorem.qm";
 }
 
 Language::~Language()
@@ -18,12 +15,10 @@ Language::~Language()
     delete ts;
 }
 
-void Language::ChangeLanguage(const int num)
+void Language::ChangeLanguage(const QString file)
 {
-    std::clog<< "Language::ChangeLanguage(" << num << ")" << std::endl;
-    if(num >= languages.size())
-        return;
-    if(!ts->load(languages[num]))
-        std::clog<<"Can't find language file."<<std::endl;
+    std::clog<< "Language::ChangeLanguage(" << file.toStdString() << ")" << std::endl;
+    if(!ts->load(file))
+        std::clog<<"Can't open language file."<<std::endl;
     this->app->installTranslator(ts);
 }

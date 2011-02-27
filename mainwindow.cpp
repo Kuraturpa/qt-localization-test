@@ -22,7 +22,7 @@ MainWindow::MainWindow(QApplication* a,QWidget *parent) :
         QRadioButton* rb = list.at(i);
         connect(rb,SIGNAL(clicked()),this,SLOT(ChangeLanguage()));
     }
-    lang->ChangeLanguage(0);
+    lang->ChangeLanguage("suomi.qm");
     ui->retranslateUi(this);
     std::clog<<"Window opened"<<std::endl;
 }
@@ -41,8 +41,11 @@ void MainWindow::ChangeLanguage()
     for(int i=0;i<list.size();i++)
     {
         QRadioButton* rb = list.at(i);
-        if(rb->isChecked() && rb->accessibleName().length() > 0)
-            lang->ChangeLanguage(rb->accessibleName().toInt());
+        if(rb->isChecked())
+        {
+            lang->ChangeLanguage(rb->property(("lang_file")).toString()); // lang_file is dynamic property
+            break;
+        }
     }
     ui->retranslateUi(this);
 }

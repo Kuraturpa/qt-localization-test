@@ -46,7 +46,7 @@
           <property name="title">
            <string>Kieli</string>
           </property>
-          <widget class="QWidget" name="">
+          <widget class="QWidget" name="layoutWidget">
            <property name="geometry">
             <rect>
              <x>11</x>
@@ -59,27 +59,33 @@
             <item>
              <widget class="QRadioButton" name="radioButton_lorem">
               <property name="accessibleName">
-               <string>2</string>
+               <string/>
               </property>
               <property name="text">
                <string>lorem ipsum</string>
+              </property>
+              <property name="lang_file" stdset="0">
+               <string notr="true">lorem.qm</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QRadioButton" name="radioButton_english">
               <property name="accessibleName">
-               <string>1</string>
+               <string/>
               </property>
               <property name="text">
                <string>English</string>
+              </property>
+              <property name="lang_file" stdset="0">
+               <string notr="true">english.qm</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QRadioButton" name="radioButton_suomi">
               <property name="accessibleName">
-               <string>0</string>
+               <string/>
               </property>
               <property name="text">
                <string>Suomi</string>
@@ -87,14 +93,16 @@
               <property name="checked">
                <bool>true</bool>
               </property>
+              <property name="lang_file" stdset="0">
+               <string notr="true">suomi.qm</string>
+              </property>
              </widget>
             </item>
            </layout>
+           <zorder>radioButton_english</zorder>
+           <zorder>radioButton_suomi</zorder>
            <zorder>radioButton_lorem</zorder>
           </widget>
-          <zorder>radioButton_english</zorder>
-          <zorder>radioButton_suomi</zorder>
-          <zorder>radioButton_lorem</zorder>
          </widget>
         </item>
        </layout>
@@ -182,22 +190,6 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionSuomi">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Suomi</string>
-   </property>
-  </action>
-  <action name="actionEnglish">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>English</string>
-   </property>
-  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
