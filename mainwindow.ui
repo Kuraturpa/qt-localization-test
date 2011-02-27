@@ -6,111 +6,158 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>377</width>
-    <height>270</height>
+    <width>379</width>
+    <height>236</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Qt-localization-test</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>Qt-localization-test</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QGroupBox" name="groupBox">
-        <property name="title">
-         <string>Kieli</string>
-        </property>
-        <widget class="QRadioButton" name="radioButton_suomi">
-         <property name="geometry">
-          <rect>
-           <x>11</x>
-           <y>61</y>
-           <width>114</width>
-           <height>24</height>
-          </rect>
-         </property>
-         <property name="accessibleName">
-          <string>0</string>
-         </property>
-         <property name="text">
-          <string>Suomi</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-        <widget class="QRadioButton" name="radioButton_english">
-         <property name="geometry">
-          <rect>
-           <x>11</x>
-           <y>30</y>
-           <width>114</width>
-           <height>24</height>
-          </rect>
-         </property>
-         <property name="accessibleName">
-          <string>1</string>
-         </property>
-         <property name="text">
-          <string>English</string>
-         </property>
-        </widget>
-        <zorder>radioButton_english</zorder>
-        <zorder>radioButton_suomi</zorder>
-       </widget>
-      </item>
-      <item row="1" column="0" colspan="2">
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>Tämän ohjelman avulla testataan qt localisointia</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <widget class="QPushButton" name="pushButton_dialog">
-        <property name="text">
-         <string>Avaa ikkuna</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_3">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>218</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Qt-localization-test</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Kieli</string>
+          </property>
+          <widget class="QWidget" name="">
+           <property name="geometry">
+            <rect>
+             <x>11</x>
+             <y>20</y>
+             <width>117</width>
+             <height>86</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QRadioButton" name="radioButton_lorem">
+              <property name="accessibleName">
+               <string>2</string>
+              </property>
+              <property name="text">
+               <string>lorem ipsum</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_english">
+              <property name="accessibleName">
+               <string>1</string>
+              </property>
+              <property name="text">
+               <string>English</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_suomi">
+              <property name="accessibleName">
+               <string>0</string>
+              </property>
+              <property name="text">
+               <string>Suomi</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+           <zorder>radioButton_lorem</zorder>
+          </widget>
+          <zorder>radioButton_english</zorder>
+          <zorder>radioButton_suomi</zorder>
+          <zorder>radioButton_lorem</zorder>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_quit">
-        <property name="text">
-         <string>Lopeta</string>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
         </property>
-       </widget>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Tämän ohjelman avulla testataan qt localisointia</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_dialog">
+            <property name="text">
+             <string>Avaa ikkuna</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>148</width>
+              <height>18</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_quit">
+            <property name="text">
+             <string>Lopeta</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -121,7 +168,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>377</width>
+     <width>379</width>
      <height>26</height>
     </rect>
    </property>

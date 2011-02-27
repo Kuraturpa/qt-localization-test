@@ -16,8 +16,6 @@ MainWindow::MainWindow(QApplication* a,QWidget *parent) :
         return;
     connect(ui->pushButton_quit,SIGNAL(clicked()),this,SLOT(close()));
     connect(ui->pushButton_dialog,SIGNAL(clicked()),this,SLOT(OpenDialog()));
-    //connect(ui->radioButton_suomi,SIGNAL(clicked()),this,SLOT(ChangeLanguage()));
-    //connect(ui->radioButton_english,SIGNAL(clicked()),this,SLOT(ChangeLanguage()));
     QList<QRadioButton*> list = ui->groupBox->findChildren<QRadioButton*>();
     for(int i=0;i<list.size();i++)
     {
