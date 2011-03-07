@@ -1,3 +1,16 @@
+// -- -- -- -- -- -- -- -- --
+/*
+    Tekijä: Joonas Ruotsalainen
+    Email: joo.ruot@gmail.com
+    Tiedosto: mainwindow.h
+    Luotu: 2011-02-24
+
+    Kuvaus:
+            header file
+
+*/
+// -- -- -- -- -- -- -- -- --
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

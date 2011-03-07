@@ -1,3 +1,15 @@
+// -- -- -- -- -- -- -- -- --
+/*
+    Tekijä: Joonas Ruotsalainen
+    Email: joo.ruot@gmail.com
+    Tiedosto: language.cpp
+    Luotu: 2011-02-24
+
+    Kuvaus:
+            Kielen vaihtamisen toiminnallisuus
+*/
+// -- -- -- -- -- -- -- -- --
+
 #include "language.h"
 #include <iostream>
 

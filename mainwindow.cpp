@@ -1,3 +1,15 @@
+// -- -- -- -- -- -- -- -- --
+/*
+    Tekijä: Joonas Ruotsalainen
+    Email: joo.ruot@gmail.com
+    Tiedosto: mainwindow.cpp
+    Luotu: 2011-02-24
+
+    Kuvaus:
+            mainwindow
+*/
+// -- -- -- -- -- -- -- -- --
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "ui_dialog.h"

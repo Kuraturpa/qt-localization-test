@@ -1,3 +1,15 @@
+// -- -- -- -- -- -- -- -- --
+/*
+    Tekijä: Joonas Ruotsalainen
+    Email: joo.ruot@gmail.com
+    Tiedosto: main.cpp
+    Luotu: 2011-02-24
+
+    Kuvaus:
+            Qt-lokalisoinnin testiohjelma, jossa dynaaminen kielen vaihtaminen.
+*/
+// -- -- -- -- -- -- -- -- --
+
 #include <QtGui/QApplication>
 #include "mainwindow.h"
 
